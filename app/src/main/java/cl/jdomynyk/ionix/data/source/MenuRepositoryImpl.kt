@@ -1,15 +1,17 @@
 package cl.jdomynyk.ionix.data.source
 
 import cl.jdomynyk.ionix.data.entity.MenuItem
+import cl.jdomynyk.ionix.data.source.local.menu.MenuLocal
 import cl.jdomynyk.ionix.data.source.remote.MenuService
 import cl.jdomynyk.ionix.domain.RemoteResult
 import cl.jdomynyk.ionix.domain.repository.MenuRepository
 import java.lang.NullPointerException
 
 class MenuRepositoryImpl(
-    private val menuService: MenuService
+    private val menuService: MenuService,
+    private val menuLocal: MenuLocal
 ) : MenuRepository {
-    override suspend fun getMenu(): RemoteResult<List<MenuItem>> {
+    override suspend fun getRemote(): RemoteResult<List<MenuItem>> {
         try {
             val result = menuService.getMenuAsync().await()
             if (result.isSuccessful) {
@@ -24,5 +26,9 @@ class MenuRepositoryImpl(
             return RemoteResult.Exception(exception)
         }
     }
+
+    override suspend fun insertAll(list: List<MenuItem>) = menuLocal.insertAllSync(list)
+
+    override suspend fun getLocal(): List<MenuItem> = menuLocal.getAll()
 
 }

@@ -6,6 +6,6 @@ import retrofit2.Response
 import retrofit2.http.GET
 
 interface MenuService {
-    @GET
+    @GET("share_movies/-/raw/master/json/menu.json")
     fun getMenuAsync(): Deferred<Response<MenuItemResponse>>
 }

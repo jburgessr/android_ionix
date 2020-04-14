@@ -8,7 +8,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface SearchService {
-    //https://sandbox.ionix.cl/test-tecnico/
     @GET("search")
     fun getUserDetailAsync(@Query("rut") rut: String): Deferred<Response<BaseResponse<SearchResponse>>>
 }

@@ -4,5 +4,7 @@ import cl.jdomynyk.ionix.data.entity.MenuItem
 import cl.jdomynyk.ionix.domain.RemoteResult
 
 interface MenuRepository {
-    suspend fun getMenu(): RemoteResult<List<MenuItem>>
+    suspend fun getRemote(): RemoteResult<List<MenuItem>>
+    suspend fun insertAll(list: List<MenuItem>)
+    suspend fun getLocal(): List<MenuItem>
 }
