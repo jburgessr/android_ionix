@@ -10,4 +10,6 @@ class MenuUseCase(private val repository: MenuRepository) {
     suspend fun getLocal(): List<MenuItem> = repository.getLocal()
 
     suspend fun insertAll(list: List<MenuItem>) = repository.insertAll(list)
+
+    suspend fun cleanTable() = repository.delete()
 }

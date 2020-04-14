@@ -7,4 +7,5 @@ interface MenuRepository {
     suspend fun getRemote(): RemoteResult<List<MenuItem>>
     suspend fun insertAll(list: List<MenuItem>)
     suspend fun getLocal(): List<MenuItem>
+    suspend fun delete()
 }

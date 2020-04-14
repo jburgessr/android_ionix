@@ -11,6 +11,6 @@ interface MenuDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(entities: List<MenuItem>)
 
-    @Delete
+    @Query("DELETE FROM menu")
     suspend fun delete()
 }

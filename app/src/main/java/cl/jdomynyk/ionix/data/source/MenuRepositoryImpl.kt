@@ -30,5 +30,6 @@ class MenuRepositoryImpl(
     override suspend fun insertAll(list: List<MenuItem>) = menuLocal.insertAllSync(list)
 
     override suspend fun getLocal(): List<MenuItem> = menuLocal.getAll()
+    override suspend fun delete() = menuLocal.delete()
 
 }

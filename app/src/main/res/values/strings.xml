@@ -1,3 +1,25 @@
 <resources>
     <string name="app_name">Ionix</string>
+
+    <!-- HOME -->
+    <string name="home_tv_welcome">Bienvenido</string>
+    <string name="home_msg_error_service_retry">problemas con el servicio, cargaremos los datos locales</string>
+    <string name="home_msg_error_service">problemas con el servicio</string>
+    <string name="home_msg_retry">Reintentar</string>
+    <string name="home_btn_save">Guardar</string>
+    <string name="home_btn_close">Cerrar</string>
+    <string name="home_tv_rut">Ingresa el Rut</string>
+    <string name="home_tv_clean">borrar</string>
+    <string name="home_et_rut">11.111.111&#8211;1</string>
+    <string name="home_tv_phone">Teléfono</string>
+    <string name="home_tv_email">Correo</string>
+    <string name="home_msg_not_found">No encontramos el segundo contacto</string>
+
+    <string name="fa_dollar_sign">&#xf155;</string>
+    <string name="fa_wallet">&#xf555;</string>
+    <string name="fa_map_marked_alt">&#xf5a0;</string>
+    <string name="fa_tag">&#xf02b;</string>
+    <string name="fa_envelope">&#xf0e0;</string>
+    <string name="fa_cog">&#xf013;</string>
+
 </resources>
