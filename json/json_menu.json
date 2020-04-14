@@ -1,0 +1,27 @@
+{ "menu":[
+  {
+    "title": "Pagar",
+    "icon": "fa-dollar-sign"
+  },
+  {
+    "title": "Billetera",
+    "icon": "fa-wallet"
+  },
+  {
+    "title": "Estaciones",
+    "icon": "fa-map-marked-alt"
+  },
+  {
+    "title": "Beneficios",
+    "icon": "fa-tag"
+  },
+  {
+    "title": "Mensajes",
+    "icon": "fa-envelope"
+  },
+  {
+    "title": "Configuración",
+    "icon": "fa-cog"
+  }
+]
+}
