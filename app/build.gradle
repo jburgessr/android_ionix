@@ -64,6 +64,13 @@ dependencies {
     // gson
     implementation "com.google.code.gson:gson:$gson_version"
 
+    // dagger
+    implementation "com.google.dagger:dagger:$dagger_version"
+
+    kapt "com.google.dagger:dagger-compiler:$dagger_annotation_version"
+    kapt "com.google.dagger:dagger-android-processor:$dagger_annotation_version"
+    implementation "com.google.dagger:dagger-android-support:$dagger_support_version"
+
     // coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutines_version"
