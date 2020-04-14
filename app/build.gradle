@@ -58,6 +58,12 @@ dependencies {
     // design
     implementation "com.google.android.material:material:$material_version"
 
+    // recyclerview
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+
+    // cardview
+    implementation "androidx.cardview:cardview:$cardview_version"
+
     // retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit_version"
