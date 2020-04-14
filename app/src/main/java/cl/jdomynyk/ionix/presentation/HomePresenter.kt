@@ -17,7 +17,7 @@ class HomePresenter(
     private val menuUseCase: MenuUseCase
 ) : BasePresenter() {
 
-    private val _menuItems = MutableLiveData<List<MenuItem>>().apply { value = emptyList() }
+    private val _menuItems = MutableLiveData<List<MenuItem>>()
     val menuItems: LiveData<List<MenuItem>> get() = _menuItems
 
     private val _error = MutableLiveData<Boolean>()
