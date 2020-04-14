@@ -5,14 +5,11 @@ import cl.jdomynyk.ionix.data.source.remote.response.SearchResponse
 import kotlinx.coroutines.Deferred
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Headers
 import retrofit2.http.Query
-import retrofit2.http.Url
 
 interface SearchService {
-
-    //@GET
-    //fun getUserDetailAsync(@Url url: String): Deferred<Response<BaseResponse<SearchResponse>>>
-
+    //@Headers("Content-Type: application/json")
     @GET("search")
     fun getUserDetailAsync(@Query("rut") rut: String): Deferred<Response<BaseResponse<SearchResponse>>>
 }

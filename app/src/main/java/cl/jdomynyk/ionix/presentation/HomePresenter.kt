@@ -20,7 +20,7 @@ class HomePresenter(
     private val _menuItems = MutableLiveData<List<MenuItem>>().apply { value = emptyList() }
     val menuItems: LiveData<List<MenuItem>> get() = _menuItems
 
-    private val _error = MutableLiveData<Boolean>().apply { value = false }
+    private val _error = MutableLiveData<Boolean>()
     val error: LiveData<Boolean> get() = _error
 
     private val _user = MutableLiveData<User>().apply { value = null }
@@ -88,7 +88,7 @@ class HomePresenter(
 
     fun findUser(rut: String) {
         scope().launch {
-            val url = formatter.completeUrlForSearch(formatter.getRutDes(rut))
+            val url = formatter.getRutDes(rut)
             when (val result = searchUseCase.search(url)) {
                 is RemoteResult.Success -> {
                     if (result.items.isNotEmpty() && result.items.size > 1)

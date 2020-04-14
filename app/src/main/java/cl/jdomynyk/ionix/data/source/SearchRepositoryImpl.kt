@@ -13,9 +13,9 @@ class SearchRepositoryImpl(
         try {
             val result = searchService.getUserDetailAsync(rut).await()
             if (result.isSuccessful) {
-                val items = result.body()?.data?.list
+                val items = result.body()?.data
                 return if (items != null)
-                    RemoteResult.Success(items)
+                    RemoteResult.Success(items.list)
                 else
                     RemoteResult.Exception(NullPointerException())
             }

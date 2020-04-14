@@ -125,7 +125,7 @@ class HomeActivity : DaggerAppCompatActivity() {
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         dialog.setCancelable(true)
         view.findViewById<TextView>(R.id.tvEmail).text = user.detail.email
-        view.findViewById<TextView>(R.id.tvPhone).text = user.detail.phoneNumber.toString()
+        view.findViewById<TextView>(R.id.tvPhone).text = user.detail.phoneNumber
         dialog.show()
     }
 
