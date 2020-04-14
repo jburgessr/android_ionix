@@ -23,7 +23,7 @@ class HomePresenter(
     private val _error = MutableLiveData<Boolean>()
     val error: LiveData<Boolean> get() = _error
 
-    private val _user = MutableLiveData<User>().apply { value = null }
+    private val _user = MutableLiveData<User>()
     val user: LiveData<User> get() = _user
 
     private val _showRut = MutableLiveData<Any>()
