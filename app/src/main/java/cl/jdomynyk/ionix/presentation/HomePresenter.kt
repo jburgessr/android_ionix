@@ -33,7 +33,6 @@ class HomePresenter(
         scope().launch {
             when (val result = menuUseCase.getRemote()) {
                 is RemoteResult.Success -> {
-                    _error.postValue(false)
                     saveLocal(result.items)
                 }
                 is RemoteResult.Error -> {

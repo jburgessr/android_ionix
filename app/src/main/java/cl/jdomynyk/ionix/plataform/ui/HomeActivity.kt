@@ -92,8 +92,8 @@ class HomeActivity : DaggerAppCompatActivity() {
     }
 
     private fun initObserverError() {
-        presenter.error.observe(this, Observer {
-            showErrorService()
+        presenter.error.observe(this, Observer { error ->
+            if (error) showErrorService()
         })
     }
 
